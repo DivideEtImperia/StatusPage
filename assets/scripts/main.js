@@ -2,6 +2,11 @@ $(() => {
   let element = document.getElementById('status');
   element.innerHTML = 'All Systems Online';
   $('#status').addClass('green');
+
+  element = document.getElementById('today');
+  let today = new Date().toString();
+  today = today.split(' ').splice(1, 3);
+  element.innerHTML = `Today, ${today.join(' ')} (GMT)`;
 });
 
 let sp = new StatusPage.page({ page : 'srhpyqt94yxb' });
