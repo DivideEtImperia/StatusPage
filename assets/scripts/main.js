@@ -21,6 +21,15 @@ $.ajax({
       type: type,
       response: response
     });
+
+    let element = document.getElementById('bastion:bot');
+    element.innerHTML = 'Service Unavailable';
+    element.setAttribute('style', 'color: #DD0000');
+
+    element = document.getElementById('status');
+    element.innerHTML = 'Major Service Outage';
+    $('#status').addClass('red');
+    $('#status').removeClass('green yellow orange');
   },
   success: (bastion) => {
     let element = document.getElementById('bastion:bot');
@@ -38,6 +47,15 @@ $.ajax({
       type: type,
       response: response
     });
+
+    let element = document.getElementById('bastion:guild');
+    element.innerHTML = 'Service Unavailable';
+    element.setAttribute('style', 'color: #DD0000');
+
+    element = document.getElementById('status');
+    element.innerHTML = 'Major Service Outage';
+    $('#status').addClass('red');
+    $('#status').removeClass('green yellow orange');
   },
   success: (guild) => {
     let element = document.getElementById('bastion:guild');
@@ -48,6 +66,22 @@ $.ajax({
 
 $.ajax({
   url: 'https://bastionbot.org',
+  error: (response, type, exception) => {
+    console.error({
+      exception: exception,
+      type: type,
+      response: response
+    });
+
+    let element = document.getElementById('bastion:website');
+    element.innerHTML = 'Service Unavailable';
+    element.setAttribute('style', 'color: #DD0000');
+
+    element = document.getElementById('status');
+    element.innerHTML = 'Major Service Outage';
+    $('#status').addClass('red');
+    $('#status').removeClass('green yellow orange');
+  },
   statusCode: {
     200: () => {
       let element = document.getElementById('bastion:website');
@@ -59,6 +93,22 @@ $.ajax({
 
 $.ajax({
   url: 'https://docs.bastionbot.org',
+  error: (response, type, exception) => {
+    console.error({
+      exception: exception,
+      type: type,
+      response: response
+    });
+
+    let element = document.getElementById('bastion:docs');
+    element.innerHTML = 'Service Unavailable';
+    element.setAttribute('style', 'color: #DD0000');
+
+    element = document.getElementById('status');
+    element.innerHTML = 'Major Service Outage';
+    $('#status').addClass('red');
+    $('#status').removeClass('green yellow orange');
+  },
   statusCode: {
     200: () => {
       let element = document.getElementById('bastion:docs');
