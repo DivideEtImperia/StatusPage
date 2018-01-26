@@ -1,3 +1,9 @@
+$(() => {
+  let element = document.getElementById('status');
+  element.innerHTML = 'All Systems Online';
+  $('#status').addClass('green');
+});
+
 let sp = new StatusPage.page({ page : 'srhpyqt94yxb' });
 sp.summary({
   success : (data) => {
