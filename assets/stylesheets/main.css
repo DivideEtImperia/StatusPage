@@ -17,10 +17,12 @@ button {
   margin: 2px;
   border: 0;
   border-radius: 3px;
-  background-color: white;
+  background: white;
   background: linear-gradient(135deg, #F5F5F5, #E5E5E5);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 button:hover {
   transform: translateY(-2px);
