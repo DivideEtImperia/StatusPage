@@ -44,6 +44,13 @@ a:hover {
   color: #68BCC0;
 }
 
+a.external:hover::after {
+  margin-left: 5px;
+  line-height: 100%;
+  position: absolute;
+  content: '↗';
+}
+
 /**
  * Header
  */
