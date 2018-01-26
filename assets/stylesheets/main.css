@@ -28,6 +28,11 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
+button.twitter {
+  background: #1DA1F2;
+  background: linear-gradient(135deg, #1DA1F2, #2D81FD);
+  color: white;
+}
 
 hr {
   color: #E5E5E5;
