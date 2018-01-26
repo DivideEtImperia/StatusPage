@@ -17,7 +17,9 @@ $.ajax({
     });
   },
   success: (bastion) => {
-    document.getElementById('bastion:bot').innerHTML = bastion.status.charAt(0).toUpperCase() + bastion.status.substr(1).toLowerCase();
+    let element = document.getElementById('bastion:bot');
+    element.innerHTML = bastion.status.charAt(0).toUpperCase() + bastion.status.substr(1).toLowerCase();
+    element.setAttribute('style', 'color: #71BF60');
   }
 });
 
@@ -25,7 +27,9 @@ $.ajax({
   url: 'https://bastionbot.org',
   statusCode: {
     200: () => {
-      document.getElementById('bastion:website').innerHTML = 'Online';
+      let element = document.getElementById('bastion:website');
+      element.innerHTML = 'Online';
+      element.setAttribute('style', 'color: #71BF60');
     }
   }
 });
@@ -34,7 +38,9 @@ $.ajax({
   url: 'https://docs.bastionbot.org',
   statusCode: {
     200: () => {
-      document.getElementById('bastion:docs').innerHTML = 'Online';
+      let element = document.getElementById('bastion:docs');
+      element.innerHTML = 'Online';
+      element.setAttribute('style', 'color: #71BF60');
     }
   }
 });
