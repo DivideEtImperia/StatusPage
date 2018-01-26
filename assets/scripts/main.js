@@ -24,6 +24,23 @@ $.ajax({
 });
 
 $.ajax({
+  url: 'https://discordapp.com/api/guilds/267022940967665664/embed.json',
+  dataType: 'json',
+  error: (response, type, exception) => {
+    console.error({
+      exception: exception,
+      type: type,
+      response: response
+    });
+  },
+  success: (guild) => {
+    let element = document.getElementById('bastion:guild');
+    element.innerHTML = 'Online';
+    element.setAttribute('style', 'color: #71BF60');
+  }
+});
+
+$.ajax({
   url: 'https://bastionbot.org',
   statusCode: {
     200: () => {
