@@ -29,3 +29,12 @@ $.ajax({
     }
   }
 });
+
+$.ajax({
+  url: 'https://docs.bastionbot.org',
+  statusCode: {
+    200: () => {
+      document.getElementById('bastion:docs').innerHTML = 'Online';
+    }
+  }
+});
