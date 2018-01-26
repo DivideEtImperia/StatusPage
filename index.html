@@ -39,11 +39,11 @@
           </div>
         </div>
         <div class="components-container">
-          <div class="title">Discord Services</div>
-          <div class="component">API<span class="status">Fetching...</span></div>
-          <div class="component">Gateway<span class="status">Fetching...</span></div>
-          <div class="component">CloudFlare<span class="status">Fetching...</span></div>
-          <div class="component">Media Proxy<span class="status">Fetching...</span></div>
+          <div class="title"><a class="external" href="https://status.discordapp.com">Discord Services</a></div>
+          <div class="component">API<span id="discord:api" class="status">Fetching...</span></div>
+          <div class="component">Gateway<span id="discord:gateway" class="status">Fetching...</span></div>
+          <div class="component">CloudFlare<span id="discord:cloudflare" class="status">Fetching...</span></div>
+          <div class="component">Media Proxy<span id="discord:media-proxy" class="status">Fetching...</span></div>
         </div>
         <div class="components-container">
           <div class="title">Services</div>
@@ -64,5 +64,18 @@
         </div>
       </footer>
     </div>
+
+    <!-- Scripts -->
+    <!-- Discord Status -->
+    <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+    <script>
+      let sp = new StatusPage.page({ page : 'srhpyqt94yxb' });
+      sp.summary({
+        success : (data) => {
+          let components = data.components.filter(component => /(API|Gateway|CloudFlare|Media Proxy)/i.test(component.name));
+          for (let component of components) document.getElementById(`discord:${component.name.toLowerCase().replace(/ /g, '-')}`).innerHTML = component.status.charAt(0).toUpperCase() + component.status.substr(1).toLowerCase();
+        }
+      });
+    </script>
   </body>
 </html>
