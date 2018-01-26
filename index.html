@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bastion Status</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+        <div class="header-logo">
+          <img src="https://resources.bastionbot.org/logos/BastionLogo_Text_Light_ON.png" alt="Bastion Logo" height="48">
+        </div>
+        <div class="header-buttons">
+          <a href="https://bastionbot.org" title="The Bastion Bot - Home"><button type="button" name="button">Home</button></a>
+          <a href="https://twitter.com/TheBastionBot" title="Follow @TheBastionBot on Twitter"><button type="button" name="button">@TheBastionBot</button></a>
+        </div>
+        <div class="status-header">
+          <div class="status-content green">All Systems Online</div>
+        </div>
+      </header>
+    </div>
+    <div class="container">
+      <main>
+        <div class="incidents-container">
+          <div class="title">Incidents</div>
+          <div class="date">Today, Jan 26, 2018 GMT</div>
+          <div class="incidents">
+            No incidents reported today.
+            <!-- <div class="incident">
+              <div class="incident-title"></div>
+              <div class="incident-description"></div>
+              <div class="incident-description"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="components-container">
+          <div class="title">Discord Services</div>
+          <div class="component">API<span class="status">Online</span></div>
+          <div class="component">Gateway<span class="status">Online</span></div>
+          <div class="component">CloudFlare<span class="status">Online</span></div>
+          <div class="component">Media Proxy<span class="status">Online</span></div>
+        </div>
+        <div class="components-container">
+          <div class="title">Services</div>
+          <div class="component">Discord Bot<span class="status">Online</span></div>
+          <div class="component">Website<span class="status">Online</span></div>
+          <div class="component">Documentation<span class="status">Online</span></div>
+          <div class="component">Discord Server<span class="status">Online</span></div>
+        </div>
+        <!-- <div class="card-container"></div> -->
+      </main>
+    </div>
+    <div class="footer-container">
+      <footer>
+        <hr noshade />
+        <div class="footer-content">
+          <a href="/history/" title="Incident History">&#8592; Incident History</a>
+          <span>Powered by robots</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
