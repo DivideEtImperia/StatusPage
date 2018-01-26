@@ -20,3 +20,12 @@ $.ajax({
     document.getElementById('bastion:bot').innerHTML = bastion.status.charAt(0).toUpperCase() + bastion.status.substr(1).toLowerCase();
   }
 });
+
+$.ajax({
+  url: 'https://bastionbot.org',
+  statusCode: {
+    200: () => {
+      document.getElementById('bastion:website').innerHTML = 'Online';
+    }
+  }
+});
