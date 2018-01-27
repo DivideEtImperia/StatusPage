@@ -165,6 +165,13 @@ $.ajax({
             </div>`);
         }
       }
+
+      let status = document.getElementById('status');
+      if (status.innerHTML !== 'Major Service Outage') {
+        status.innerHTML = 'Minor System Outage';
+        $('#status').addClass('yellow');
+        $('#status').removeClass('green');
+      }
     }
   }
 });
