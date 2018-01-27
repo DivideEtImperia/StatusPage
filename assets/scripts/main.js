@@ -122,3 +122,49 @@ $.ajax({
     }
   }
 });
+
+$.ajax({
+  url: '/history/incidents.json',
+  dataType: 'json',
+  error: (response, type, exception) => {
+    console.error({
+      exception: exception,
+      type: type,
+      response: response
+    });
+  },
+  success: (incidents) => {
+    let months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' ];
+    let date = new Date();
+
+    let day = date.getDate();
+    let monthIndex = date.getMonth();
+    let month = months[monthIndex];
+    let year = date.getFullYear();
+
+    let incidentsToday = incidents[`${day}${monthIndex + 1}${year}`];
+
+    if (incidentsToday) {
+      document.getElementById('noIncidents').setAttribute('hidden', true);
+
+      let element = document.getElementById('incidentsToday');
+
+      for (let i = 0; i < incidentsToday.length; i++) {
+        element.insertAdjacentHTML('beforeend',
+          `<div id="incident-${i}" class="incident">
+            <div class="incident-title">${incidentsToday[i].title}</div>
+            <div class="incident-resolve-status">${incidentsToday[i].resolved ? `<b>Resolved</b> ${new Date(incidentsToday[i].resolved)}` : 'We are trying to resolve this ASAP. Hang tight.'}</div>
+          </div>`);
+
+        for (let report of incidentsToday[i].reports) {
+          let element = document.getElementById(`incident-${i}`);
+          element.insertAdjacentHTML('beforeend',
+            `<div class="incident-description ${incidentsToday[i].resolved ? 'resolved': ''}">
+              <b>${report.title}</b> - ${report.description}<br />
+              <span class="incident-report-date">Posted ${new Date(report.time)}<span>
+            </div>`);
+        }
+      }
+    }
+  }
+});
