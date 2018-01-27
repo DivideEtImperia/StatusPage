@@ -33,8 +33,8 @@ $.ajax({
 
     element = document.getElementById('status');
     element.innerHTML = 'Major Service Outage';
-    $('#status').addClass('red');
-    $('#status').removeClass('green yellow orange');
+    $('#status').addClass('orange');
+    $('#status').removeClass('green yellow');
   },
   success: (bastion) => {
     let element = document.getElementById('bastion:bot');
@@ -59,8 +59,8 @@ $.ajax({
 
     element = document.getElementById('status');
     element.innerHTML = 'Major Service Outage';
-    $('#status').addClass('red');
-    $('#status').removeClass('green yellow orange');
+    $('#status').addClass('orange');
+    $('#status').removeClass('green yellow');
   },
   success: (guild) => {
     let element = document.getElementById('bastion:guild');
@@ -84,8 +84,8 @@ $.ajax({
 
     element = document.getElementById('status');
     element.innerHTML = 'Major Service Outage';
-    $('#status').addClass('red');
-    $('#status').removeClass('green yellow orange');
+    $('#status').addClass('orange');
+    $('#status').removeClass('green yellow');
   },
   statusCode: {
     200: () => {
@@ -111,8 +111,8 @@ $.ajax({
 
     element = document.getElementById('status');
     element.innerHTML = 'Major Service Outage';
-    $('#status').addClass('red');
-    $('#status').removeClass('green yellow orange');
+    $('#status').addClass('orange');
+    $('#status').removeClass('green yellow');
   },
   statusCode: {
     200: () => {
