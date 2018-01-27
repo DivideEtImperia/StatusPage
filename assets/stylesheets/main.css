@@ -195,6 +195,12 @@ main div.incidents-container div.incidents div.incident div.incident-title {
   font-size: 1.5em;
   font-weight: 500;
 }
+main div.incidents-container div.incidents div.incident div.incident-description.resolved {
+  opacity: .4;
+}
+main div.incidents-container div.incidents div.incident div.incident-description.resolved:hover {
+  opacity: 1;
+}
 main div.incidents-container div.incidents div.incident span.incident-report-date {
   font-size: .9em;
   color: #AAA;
