@@ -1,1 +1,25 @@
-{}
+{
+  "1422018": [
+    {
+      "title": "Bastion Bot was down",
+      "reports": [
+        {
+          "title": "Resolved",
+          "description": "Bastion Bot is up and running at full speed and this incident is resolved.",
+          "time": 1518614820000
+        },
+        {
+          "title": "Update",
+          "description": "We've found the cause of the issue being unable to connect to the Discord Gateway. We are looking into why it was caused and try to fix it ASAP.",
+          "time": 1518614340000
+        },
+        {
+          "title": "Identified",
+          "description": "We've identified an issue caused Bastion to go down on all servers. And we are taking steps to find the cause of the issue and to fix it ASAP.",
+          "time": 1518614100000
+        }
+      ],
+      "resolved": true
+    }
+  ]
+}
