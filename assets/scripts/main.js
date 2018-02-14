@@ -148,6 +148,7 @@ $.ajax({
       document.getElementById('noIncidents').setAttribute('hidden', true);
 
       let element = document.getElementById('incidentsToday');
+      let outage = false;
 
       for (let i = 0; i < incidentsToday.length; i++) {
         element.insertAdjacentHTML('beforeend',
@@ -164,13 +165,17 @@ $.ajax({
               <span class="incident-report-date">Posted ${new Date(report.time)}<span>
             </div>`);
         }
+
+        if (!incidentsToday[i].resolved) outage = true;
       }
 
-      let status = document.getElementById('status');
-      if (status.innerHTML !== 'Major Service Outage') {
-        status.innerHTML = 'Minor System Outage';
-        $('#status').addClass('yellow');
-        $('#status').removeClass('green');
+      if (outage) {
+        let status = document.getElementById('status');
+        if (status.innerHTML !== 'Major Service Outage') {
+          status.innerHTML = 'Minor System Outage';
+          $('#status').addClass('yellow');
+          $('#status').removeClass('green');
+        }
       }
     }
   }
