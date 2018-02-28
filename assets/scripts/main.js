@@ -39,7 +39,12 @@ $.ajax({
   success: (bastion) => {
     let element = document.getElementById('bastion:bot');
     element.innerHTML = bastion.status.charAt(0).toUpperCase() + bastion.status.substr(1).toLowerCase();
-    element.setAttribute('style', 'color: #71BF60');
+    if (element.innerHTML.toLowerCase() === 'offline') {
+      element.setAttribute('style', 'color: #DD0000');
+    }
+    else {
+      element.setAttribute('style', 'color: #71BF60');
+    }
   }
 });
 
