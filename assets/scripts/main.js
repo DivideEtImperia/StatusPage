@@ -41,6 +41,11 @@ $.ajax({
     element.innerHTML = bastion.status.charAt(0).toUpperCase() + bastion.status.substr(1).toLowerCase();
     if (element.innerHTML.toLowerCase() === 'offline') {
       element.setAttribute('style', 'color: #DD0000');
+
+      element = document.getElementById('status');
+      element.innerHTML = 'Major Service Outage';
+      $('#status').addClass('orange');
+      $('#status').removeClass('green yellow');
     }
     else {
       element.setAttribute('style', 'color: #71BF60');
