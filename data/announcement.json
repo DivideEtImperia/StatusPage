@@ -1,0 +1,4 @@
+{
+  "title": "Scheduled Maintenance",
+  "description": "A scheduled maintenance for security checks & updates of the server, where Bastion is hosted, will be performed on 1st March 2018 during 20:00 UTC and 21:00 UTC. During this one hour window, reboots will be performed on the server which will result in Bastion being offline for some part of the given duration. I'll bring Bastion online as quickly as possible. Anticipate a maximum downtime of 15 minutes  but expect it to be back online much faster."
+}
