@@ -190,3 +190,24 @@ $.ajax({
     }
   }
 });
+
+$.ajax({
+  url: '/data/announcement.json',
+  dataType: 'json',
+  error: (response, type, exception) => {
+    console.error({
+      exception: exception,
+      type: type,
+      response: response
+    });
+  },
+  success: (announcement) => {
+    if (announcement && announcement.title && announcement.description) {
+      document.getElementById('announcement-title').innerHTML = announcement.title;
+      document.getElementById('announcement-content').innerHTML = announcement.description;
+    }
+    else {
+      document.getElementById('announcement').setAttribute('hidden', true);
+    }
+  }
+});
