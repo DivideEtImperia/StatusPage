@@ -143,12 +143,21 @@ main {
   display: flex;
   flex-wrap: wrap-reverse;
 }
+main div.announcement-container,
 main div.components-container,
 main div.incidents-container {
   margin-bottom: 25px;
   width: 100%;
   border: 1px solid #E5E5E5;
   border-radius: 3px;
+}
+
+main div.announcement-container {
+ padding: 20px 25px;
+}
+main div.announcement-container div.announcement-title {
+  font-size: 1.5em;
+  margin-bottom: 5px;
 }
 
 main div.components-container div {
