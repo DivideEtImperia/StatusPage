@@ -1,4 +1,4 @@
 {
-  "title": "",
-  "description": ""
+  "title": "Server Networking Issue",
+  "description": "There's a temporary networking issue with Bastion's cloud provider, which might cause Bastion to respond late until it's fixed. They are currently investigating the issue. We appreciate your patience and will post additional information once it becomes available."
 }
