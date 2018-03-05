@@ -1,4 +1,17 @@
 {
+  "532018": [
+    {
+      "title": "Server Networking Issue",
+      "reports": [
+        {
+          "title": "Investigating",
+          "description": "There's a temporary networking issue with Bastion's cloud provider, which might cause Bastion to respond late until it's fixed. They are currently investigating the issue. We appreciate your patience and will post additional information once it becomes available.",
+          "time": 1520233050235
+        }
+      ],
+      "resolved": false
+    }
+  ],
   "1422018": [
     {
       "title": "Bastion Bot was down",
