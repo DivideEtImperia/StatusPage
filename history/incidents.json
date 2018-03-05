@@ -4,12 +4,17 @@
       "title": "Server Networking Issue",
       "reports": [
         {
+          "title": "Resolved",
+          "description": "The networking issue has been resolved by our cloud provider.",
+          "time": 1520234685526
+        },
+        {
           "title": "Investigating",
           "description": "There's a temporary networking issue with Bastion's cloud provider, which might cause Bastion to respond late until it's fixed. They are currently investigating the issue. We appreciate your patience and will post additional information once it becomes available.",
           "time": 1520233050235
         }
       ],
-      "resolved": false
+      "resolved": 1520234685526
     }
   ],
   "1422018": [
