@@ -48,7 +48,7 @@ a {
   color: inherit;
 }
 a:hover {
-  color: #68BCC0;
+  color: #62d6fb;
 }
 
 a.external:hover::after {
@@ -63,7 +63,7 @@ a.external:hover::after {
  */
 div.header-container {
   height: 200px;
-  background-color: #18191C;
+  background-color: #070a0c;
   margin-bottom: 70px;
 }
 
